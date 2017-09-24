@@ -10,6 +10,18 @@ Clone or download the repo.
 
 Experiment in IEx and using your preferred editor.
 
+`iex -S mix`
+
+Example of using the `ProcessState.SpawnBasic` example.
+
+```elixir
+alias ProcessState.SpawnBasic
+pid = SpawnBasic.start(%{counter: 0})
+send(pid, {:add, 10})
+send(pid, {:add, 1})
+send(pid, {:add, 2})
+```
+
 ## Explanation
 
 I customized Logger output to include some metadata information. Then I use
